@@ -1,0 +1,341 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>_我的网站</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/bona/templets/moban/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<meta http-equiv="mobile-agent" content="format=xhtml;url=/bona/m/view.php?aid=23">
+<script type="text/javascript">if(window.location.toString().indexOf('pref=padindex') != -1){}else{if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){if(window.location.href.indexOf("?mobile")<0){try{if(/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)){window.location.href="/bona/m/view.php?aid=23";}else if(/iPad/i.test(navigator.userAgent)){}else{}}catch(e){}}}}</script>
+<script language="javascript" type="text/javascript" src="/bona/include/dedeajax2.js"></script>
+
+<script language="javascript" type="text/javascript">
+<!--
+function CheckLogin(){
+	  var taget_obj = document.getElementById('_ajax_feedback');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("/bona/member/ajax_feedback.php");
+	  DedeXHTTP = null;
+}
+function postBadGood(ftype,fid)
+{
+	var taget_obj = document.getElementById(ftype+fid);
+	var saveid = GetCookie('badgoodid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==fid && hasid) continue;
+			else {
+				if(saveids[i]==fid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==10 && hasid) break;
+				if(j==9 && !hasid) break;
+			}
+		}
+		if(hasid) { alert('您刚才已表决过了喔！'); return false;}
+		else saveid += ','+fid;
+		SetCookie('badgoodid',saveid,1);
+	}
+	else
+	{
+		SetCookie('badgoodid',fid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/bona/plus/feedback.php?aid="+fid+"&action="+ftype+"&fid="+fid);
+}
+function postDigg(ftype,aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	var saveid = GetCookie('diggid');
+	if(saveid != null)
+	{
+		var saveids = saveid.split(',');
+		var hasid = false;
+		saveid = '';
+		j = 1;
+		for(i=saveids.length-1;i>=0;i--)
+		{
+			if(saveids[i]==aid && hasid) continue;
+			else {
+				if(saveids[i]==aid && !hasid) hasid = true;
+				saveid += (saveid=='' ? saveids[i] : ','+saveids[i]);
+				j++;
+				if(j==20 && hasid) break;
+				if(j==19 && !hasid) break;
+			}
+		}
+		if(hasid) { alert("您已经顶过该帖，请不要重复顶帖 ！"); return; }
+		else saveid += ','+aid;
+		SetCookie('diggid',saveid,1);
+	}
+	else
+	{
+		SetCookie('diggid',aid,1);
+	}
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	var url = "/bona/plus/digg_ajax.php?action="+ftype+"&id="+aid;
+	myajax.SendGet2(url);
+}
+function getDigg(aid)
+{
+	var taget_obj = document.getElementById('newdigg');
+	myajax = new DedeAjax(taget_obj,false,false,'','','');
+	myajax.SendGet2("/bona/plus/digg_ajax.php?id="+aid);
+	DedeXHTTP = null;
+}
+-->
+</script>
+</head>
+<body class="articleview">
+无法在这个位置找到： head2.htm
+<!-- /header -->
+<div class="w960 center clear mt1">
+<div class="pleft">
+ <div class="place"> <strong>当前位置:</strong> <a href='http://localhost/bona'>主页</a> > <a href='/bona/a/zuixingonggao/'>最新公告</a> > <a href='/bona/a/zuixingonggao/xingyedongtai/'>行业动态</a> >  </div>
+ <!-- /place -->
+ <div class="viewbox">
+  <div class="title">
+   <h2></h2>
+  </div>
+  <!-- /title -->
+  <div class="info"> <small>时间:</small>1970-01-01 08:00<small>来源:</small> <small>作者:</small> <small>点击:</small>
+   <script src="/bona/plus/count.php?view=yes&aid=23&mid=" type='text/javascript' language="javascript"></script>
+   次</div>
+  <!-- /info -->
+  
+  <div class="content">
+   <table width='100%'>
+    <tr>
+     <td><div id="contentMidPicAD" style="float:right; clear:both; top:0; vertical-align:top;"><!-- 250x250启用SSP 开始 --><script type="text/javascript">var _mda_place_id ="58bcc82381892";</script><script type="text/javascript" src="http://place.ssp.desdev.cn/pageplace/show.js"></script><!-- 250x250启用SSP 结束 --></div>
+      
+      
+      (责任编辑：admin)</td>
+    </tr>
+   </table>
+  </div>
+  <!-- /content -->
+  <div class="dede_pages">
+   <ul class="pagelist">
+    
+   </ul>
+  </div>
+
+<center>  <a href='http://2v.dedecms.com/' id='__dedeqrcode_1'>织梦二维码生成器</a>
+  <script type="text/javascript">
+  	var __dedeqrcode_id=1;
+  	var __dedeqrcode_aid=23;
+  	var __dedeqrcode_type='arc';
+  	var __dedeqrcode_dir='/bona/plus';
+  </script>
+  <script language="javascript" type="text/javascript" src="/bona/plus/img/qrcode.js"></script></center>
+  
+  <!-- /pages -->
+  <!-- //顶踩 -->
+  <div class="newdigg" id="newdigg">
+   <div class="diggbox digg_good" onmousemove="this.style.backgroundPosition='left bottom';" onmouseout="this.style.backgroundPosition='left top';" onclick="javascript:postDigg('good',23)">
+    <div class="digg_act">顶一下</div>
+    <div class="digg_num">()</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:%"></span></div>
+     <div class="digg_percent_num">%</div>
+    </div>
+   </div>
+   <div class="diggbox digg_bad" onmousemove="this.style.backgroundPosition='right bottom';" onmouseout="this.style.backgroundPosition='right top';" onclick="javascript:postDigg('bad',23)">
+    <div class="digg_act">踩一下</div>
+    <div class="digg_num">()</div>
+    <div class="digg_percent">
+     <div class="digg_percent_bar"><span style="width:%"></span></div>
+     <div class="digg_percent_num">%</div>
+    </div>
+   </div>
+  </div>
+  <script language="javascript" type="text/javascript">getDigg(23);</script>
+  <!-- //顶踩部份的源码结束 -->
+  <!-- //分享代码开始 -->
+  
+  <!-- //分享代码结束 -->
+  <div class="boxoff"> <strong>------分隔线----------------------------</strong> </div>
+  <div class="handle">
+   <div class="context">
+    <ul>
+     <li>上一篇：没有了 </li>
+     <li>下一篇：<a href='/bona/a/zuixingonggao/xingyedongtai/2017/0929/24.html'>天神娱乐董事长朱晔对话芭莎男士：开创未来，</a> </li>
+    </ul>
+   </div>
+   <!-- /context -->
+   <div class="actbox">
+    <ul>
+     <li id="act-fav"><a href="/bona/plus/stow.php?aid=23" target="_blank">收藏</a></li>
+     <li id="act-err"><a href="/bona/plus/erraddsave.php?aid=23&title=" target="_blank">挑错</a></li>
+     <li id="act-pus"><a href="/bona/plus/recommend.php?aid=23" target="_blank">推荐</a></li>
+     <li id="act-pnt"><a href="#" onClick="window.print();">打印</a></li>
+    </ul>
+   </div>
+   <!-- /actbox -->
+  </div>
+  <!-- /handle -->
+ </div>
+ <!-- /viewbox -->
+ <!-- //AJAX评论区 -->
+ 无法在这个位置找到： ajaxfeedback.htm </div>
+<!-- //左边内容结束 -->
+<!-- //右边内容开始 -->
+<div class="pright"> 
+ <div class="pright">
+  <div>
+   <dl class="tbox">
+    <dt><strong>栏目列表</strong></dt>
+    <dd>
+     <ul class="d6">
+      
+      <li><a href='/bona/a/zuixingonggao/jituandongtai/'>集团动态</a></li>
+      
+      <li><a href='/bona/a/zuixingonggao/chanpindongtai/'>产品动态</a></li>
+      <li><a href='/bona/a/zuixingonggao/xingyedongtai/' class='thisclass'>行业动态</a></li>
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="contentRtPicAD" style="margin:10px auto"><!-- 250x250普通 开始 --><script type="text/javascript">var _mda_place_id ="58bcc92e8b472";</script><script type="text/javascript" src="http://place.ssp.desdev.cn/pageplace/show.js"></script><!-- 250x250普通 结束 --></div>
+  <div class="commend mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>推荐内容</strong></dt>
+    <dd class='light'>
+     <ul class="d4">
+      
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <!-- /commend -->
+  <div class="hot mt1">
+   <dl class="tbox light">
+    <dt class='light'><strong>热点内容</strong></dt>
+    <dd class='light'>
+     <ul class="c1 ico2">
+      <li><a href="/bona/a/zuixingonggao/xingyedongtai/2017/0929/8.html">幻想悦游五款支持PSVR的国</a></li>
+<li><a href="/bona/a/zuixingonggao/xingyedongtai/2017/0929/24.html">天神娱乐董事长朱晔对话</a></li>
+<li><a href="/bona/a/zuixingonggao/xingyedongtai/2017/0929/7.html">媒体专访 | 董事长朱晔：</a></li>
+<li><a href="/bona/a/zuixingonggao/xingyedongtai/2017/0929/9.html">2016年 天神娱乐看好你——</a></li>
+
+     </ul>
+    </dd>
+   </dl>
+  </div>
+  <div id="contentRtPicAD2" style="margin:10px auto"><!-- 250x250启用SSP 开始 --><script type="text/javascript">var _mda_place_id ="58bcc82381892";</script><script type="text/javascript" src="http://place.ssp.desdev.cn/pageplace/show.js"></script><!-- 250x250启用SSP 结束 --></div>
+ </div>
+ <!-- /pright -->
+</div>
+<div id="innerfooterAD2" style="margin:10px auto; width:726px"><!-- 728x90普通 开始 --><script type="text/javascript">var _mda_place_id ="58bce8309bc21";</script><script type="text/javascript" src="http://place.ssp.desdev.cn/pageplace/show.js"></script><!-- 728x90普通 结束 --></div>
+<footer>
+  <div class="foot">
+     <ul class="fot-left">
+        <li>
+          <h2>走进GFX高保</h2>
+          <span></span>
+          <a href="#">GFX高保介绍</a>
+          <a href="#">GFX高保优势</a>
+          <a href="#">投资及保障</a>
+          <a href="#">牌照及监管</a>
+      </li> 
+      <li>
+          <h2>软件下载</h2>
+          <span></span>
+          <a href="#/">桌面版交易平台</a>
+          <a href="#">Android版</a>
+          <a href="#">IOS版</a>
+      </li> 
+      <li>
+          <h2>账户</h2>
+          <span></span>
+          <a href="#">免费模拟账户</a>
+          <a href="#">开立真实账户</a>
+          <a href="#">管理我的账户</a>
+          <a href="#">GFX高保政策</a>
+      </li> 
+      <li>
+          <h2>外汇基础知识</h2>
+          <span></span>
+          <a href="#">什么是外汇？</a>
+          <a href="#">如何查看图表</a>
+          <a href="#">GFX高保美元/日元外汇交易</a>
+          <a href="#">常见问题</a>
+      </li> 
+      <li>
+
+          <h2>联系方式</h2>
+
+          <span></span>
+
+          <p><img src="/bona/templets/moban/images/in-f-tel.png" width="21" height="14" /><font>00852-888888</font></p>
+          <p><img src="/bona/templets/moban/images/in-f-tel22.png" width="21" height="14" /><font>公司地址：广州市天河区东莞庄路2号鸿德国际酒店</font></p>
+          <p><img src="/bona/templets/moban/images/weixin2.png"/><font>微信公众号</font></p>
+
+          <h1>GZBONA</h1>
+
+          <p><img src="/bona/templets/moban/images/in-f-yx.png" width="21" height="15" /><font>集团邮箱</font></p>
+
+          <p><small>gfx@gfx.cn.com</small></p>
+
+      </li> 
+
+  </ul>
+
+  <div class="fot-rit">
+
+   <p><img src="/bona/templets/moban/images/in-ew.png" /></p>
+
+   <ul>
+
+     <li class="m1"><a href="#"></a></li>
+
+     <li class="m2"><a href="http://t.qq.com/tianshenyule?preview"></a></li>
+
+     <li class="m3"><a href="http://weibo.com/u/5893600209/home?wvr=5"></a></li>
+ </ul>
+    </div>
+    </div>
+    <div class="foot-yqlj">
+      <ul>
+         <li><a>友情链接：</a></li>
+		 
+			<li><a href='http://www.dedecms.com' target='_blank'>织梦CMS官方</a> </li>
+		 
+			<li><a href='http://docs.dedecms.com/' target='_blank'>DedeCMS维基</a> </li>
+		 
+			<li><a href='http://bbs.dedecms.com' target='_blank'>织梦技术论</a> </li>
+		
+        
+     </ul>
+    </div>
+    <div class="foot-bom">
+        <p>Copyright &copy; 2002-2017 DEDECMS. 织梦科技 版权所有 <a href=http://www.dedecms.com target='_blank'>Power by DedeCms</a></p>
+    </div>
+</footer>
+<!-- /footer -->
+<script type="text/javascript">
+var contentRtPicAD2      = document.getElementById("contentRtPicAD2");
+var   stop      = contentRtPicAD2.offsetTop - 60,
+    docBody   = document.documentElement || document.body.parentNode || document.body,
+    hasOffset = window.pageYOffset !== undefined,
+    scrollTop;
+window.onscroll = function (e) {
+  // cross-browser compatible scrollTop.
+  scrollTop = hasOffset ? window.pageYOffset : docBody.scrollTop;
+
+  if (scrollTop >= stop) {
+    contentRtPicAD2.className = 'stick';
+  } else {
+    contentRtPicAD2.className = ''; 
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,988 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>高保</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content=""/>
+    <link rel="stylesheet" type="text/css" href="/templets/moban/style/base.css" />
+    <link rel="stylesheet" type="text/css" href="/templets/moban/style/style.css" />
+    <script type="text/javascript" src="/templets/moban/js/jquery-1.8.3.min.js"></script>
+    <script type="text/javascript" src="/templets/moban/js/jquery.db_tabmotionbanner.min.js"></script>
+    <script type="text/javascript" src="/templets/moban/js/common.js"></script>
+    <script type="text/javascript" src="/templets/moban/js/sydw.js"></script>
+    <script type="text/javascript" src="/templets/moban/js/JquerySession.js"></script>
+    <script>
+        //tck
+        $(function(){
+        	$(".aa").click(function(){   
+        	    //var id=$(this).index("dl");
+        		//var aid=$(this).index("li");
+        		var aa=parseInt($(this).attr("id"))-1;
+                $(".tdd-tc").eq(aa).stop().fadeIn(200);
+            })		  	  
+         $('.subb-tc .fab').click(function(){
+            $(".tdd-tc").stop().fadeOut(200);
+        })				
+     })
+
+        $(function () {
+        if ($.session.get('times') == undefined) {
+            //禁止滚动条(默认是没有附加这个样式类的）
+            $(document.body).toggleClass("html-body-overflow");
+            $(".maskLayer").css('height', $(document).height());
+            $('#prompt').show();
+            $.session.set('times', 'one')
+        } else if($.session.get('times')=='one'){
+            $('#prompt').hide();
+        } else if ($.session.get('times') == 'two') {
+            //禁止滚动条(默认是没有附加这个样式类的）
+            $(document.body).toggleClass("html-body-overflow");
+            $(".maskLayer").css('height', $(document).height());
+            $('#prompt').show();
+            $.session.set('times', 'one')
+        }
+           
+    })
+    function jump() {
+        window.location.href = "http://www.csrc.gov.cn";
+        $.session.set('times', 'two')
+    }
+    function ShutDown(){
+        $(document.body).toggleClass("html-body-overflow");
+        $('#prompt').hide();
+    }
+
+	 
+ </script>
+
+<style> 
+   #a{
+           width: 800px;
+           height: 500px;
+          
+           position: relative;
+           top: 20%;
+           left: 32%;
+		  
+    }
+   #a span{
+           margin-top:400px;
+		   margin-left:30px;
+		   position:absolute;
+		   
+	}
+	#a span a{
+	   margin-left:40px;
+	   padding:5px 20px;
+	   background-color:#fb780c;
+	   border:1px solid #fb780c;
+	   border-radius:5px;
+	   color:white;
+	   font-size:18px;
+	   font-family: sans-serif;
+	}
+
+</style>
+
+</head>
+<body>
+  <a name="top"> </a>
+  <style>
+    .top-dl ul li {float: left;margin: 0 10px;}
+    .top-dl{display: block;width: 340px;height: 22px;line-height: 22px; float: left;margin-left: 9%; background-color: #fcdb95;border-bottom-left-radius: 40px;border-bottom-right-radius: 40px;}
+    .top-dl ul li {float: left;margin: 0 10px;}
+    .top-dl ul li a:hover{color: #333;}
+</style>
+
+<header>
+    <div style="border-top: 2px solid #ec9e08; min-width: 1200px; padding-bottom: 45px;">
+        <div style="float: left; width:55%; margin-right: 20px;">
+            <marquee behavior="scroll"  direction="left"> 恭喜GFX高保网站正式开通运营</marquee>
+        </div>
+        <div class="top-dl" style="background-color: #f1eee9;">
+            <ul>
+              <li><a href="http://localhost/bona/a/ruanjian/anzhuo/"><img src="/templets/moban/images/phone.jpg" alt="" style="vertical-align: middle;"> Android下载</a>  |</li>
+              <li><a href="http://localhost/bona/a/ruanjian/IOS/">IOS下载</a>  |</li>
+              <li><a href="">技术支持</a>  |</li>
+              <li><a href="">English</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="head">
+        <div class="logo"><a href="http://localhost/bona"><img src="/templets/moban/images/logo.jpg" width="192" height="47" /></a></div>
+        <nav>
+            <ul>
+                <li ><a href="http://127.0.0.1/" target="_self"><i></i>首页</a></li>
+                
+                <li ><a href="/a/youshi/" target='_self'><i></i>优势</a></li>
+                
+                <li ><a href="/a/chanpin/" target='_self'><i></i>产品</a></li>
+                
+                <li ><a href="/a/ruanjian/" target='_self'><i></i>软件</a></li>
+                
+                <li ><a href="/a/zuixingonggao/" target='_self'><i></i>公告</a></li>
+                
+                <li ><a href="/a/kehuzhichi/" target='_self'><i></i>客户支持</a></li>
+                
+                <li ><a href="/a/fengxian/" target='_self'><i></i>风险提醒</a></li>
+                
+            </ul>
+        </nav>
+    </div>
+</header>
+  <div class="DB_tab25">
+    <ul class="DB_bgSet">
+        <li style="background:url(/templets/moban/images/banner-ab5.jpg) no-repeat 100% 100%;">
+		<div id="a">
+		<span>
+           			<a onclick="mser()" class="btn btn-small btn-blue btn-inline">模拟账号注册</a>
+           			<a onclick="regs()" class="btn btn-small btn-blue btn-inline">真实账号注册</a>
+           			<a onclick="errors()" class="btn btn-small btn-blue btn-inline">代理商账号注册</a>
+		</span>
+         </div>
+		</li>
+        <li style="background:url(/templets/moban/images/banner-ab2.jpg) no-repeat 100% 100%;"></li>
+        <li style="background:url(/templets/moban/images/banner-ab4.jpg) no-repeat 100% 100%;"></li>
+        <li style="background:url(/templets/moban/images/banner-ab3.jpg) no-repeat 100% 100%;"></li>
+        <li style="background:url(/templets/moban/images/banner-ab1.jpg) no-repeat 100% 100%;"></li>
+    </ul>
+    <ul class="DB_imgSet">
+        <li></li>
+        <li></li>
+		    <li></li>
+        <li></li>
+        <li></li>
+	</ul>
+	<div class="DB_menuWrap">
+		<ul class="DB_menuSet">
+			<li><img src="/templets/moban/images/btn_off.png" alt=""></li>
+			<li><img src="/templets/moban/images/btn_off.png" alt=""></li>
+			<li><img src="/templets/moban/images/btn_off.png" alt=""></li>
+            <li><img src="/templets/moban/images/btn_off.png" alt=""></li>
+            <li><img src="/templets/moban/images/btn_off.png" alt=""></li> 
+        </ul>
+	</div>
+    <div class="shubiao"><a href=""><img src="/templets/moban/images/in-sb.png" width="18" height="49" /></a></div>
+</div>
+
+<script type="text/javascript">
+
+    $('.DB_tab25').DB_tabMotionBanner({
+
+     key:'b28551',
+
+     autoRollingTime:4000,                            
+
+     bgSpeed:500,
+
+     motion:{
+
+      DB_1_1:{left:-50,opacity:0,speed:1000,delay:500},
+
+      DB_1_2:{left:-50,opacity:0,speed:1000,delay:1000},
+
+      DB_2_1:{top:50,opacity:0,speed:1000,delay:500},
+
+      DB_2_2:{top:50,opacity:0,speed:1000,delay:1000},
+
+      DB_3_1:{left:-50,opacity:0,speed:1000,delay:500},
+
+      DB_3_2:{top:50,opacity:0,speed:1000,delay:1000},
+
+      end:null
+
+  }
+
+})
+
+</script>
+<div class="content">
+  <section id="about" class="about-main item" >
+     <article class="about-left"><img src="/templets/moban/images/ab-gb.jpg" /></article>
+     <article class="about-right">
+       <div class="about-ts">
+                <div style="min-height: 200px;">
+                  <p>
+  GFX高保(GLOBAL FINANCLAL TRADING) 2016年成立于香港，GFX高保(GLOBAL FINANCLAL TRADING)是一家多元化金融服务有限公司。集团率先于英国设立总部，并随即在中国香港，中国大陆等多个国家建立分机机构。 GFX高保(GLOBAL FINANCLAL TRADING)，始终秉承用心服务客户的宗旨，以创新的技术和不断完善的服务体系，给予用户最好的体验。与此同时，不断提升品牌核心竞争力，积极为投资者创立一个“安全、稳健、高效”的互联网金融投资平台，全面开拓亚太区域乃至全球金融投资市场，以打造世界顶尖金融在线交易平台为目的，实现全球一站式融合投资交易平台的品牌战略，助力实现众利达环宇富民万世丰盈的众盈梦！ </p>
+<p>
+  GFX高保(GLOBAL FINANCLAL TRADING) 的诞生是VFSC集团在华发展的又一重要举措,锐意为华人投资者提供优良的指数、期油、期货、外汇及贵金属投资买卖服务。为全球投资者提供专业规范公平稳定的交易平台，并在专业指导、客户服务、降低交易成本、资金利用、信息提供等方面积极深入研究，建立了一套完善的运营投资方案。 </p>
+<p>
+  GFX高保(GLOBAL FINANCLAL TRADING) 通过严格的业务审核及评估，拥有VFSC认可的金融服务供货商牌照，所经营的业务受到VFSC金融监管局监管，交易系统的每笔资金往来均受到监管机构的审核，保证客户资金与公司资金分离，不会出现任何损害投资者利益的行为，为投资者提供了充分的保障。 公司的专家运营团队大部分成员拥有丰富的市场经验，客户包括世界各大银行，重量级对冲基金，机构及个人投资客户，满足投资者对各类投资产品的需求。力求为客户打造公平稳定，方便快捷的投资平台。 公司文件和报表接受了严格的财务审计和稽查，力求更好地保护众盈环球投资者的利益。</p>
+<p>
+   </p>
+
+                </div>
+                <video class="sp1" width="400" controls autoplay style=" width: 100%;height: auto;">
+                <source src="/templets/moban/images/mov_bbb.mp4" type="video/mp4">
+                <source src="/templets/moban/images/mov_bbb.ogg" type="video/ogg">
+                Your browser does not support HTML5 video.
+                </video>
+                <div class="more-gy">
+                   <a href="http://localhost/bona/a/youshi/"><span>MORE</span><img src="/templets/moban/images/in-m-jt.png" width="8" height="7" /></a>
+                   <i></i>
+               </div>
+           </div>
+           <div class="about-current">
+              <ul>
+                <li>
+                  <dl>
+                     <dt>VISION</dt>
+                     <dd>
+                       <h3>愿景</h3>
+                       <p><p>致力于打造一家以产品和用户为中心的企业</p></p>
+                       <span></span>
+                   </dd>
+               </dl>
+           </li>
+           <li>
+              <dl>
+                 <dt>VALUES</dt>
+                 <dd>
+                   <h3>价值观</h3>
+                   <p><p>学习、分享、全球视野、诚信、品牌意识</p>
+                   <p> </p></p>
+                   <span></span>
+               </dd>
+           </dl>
+       </li>
+       <li>
+          <dl>
+             <dt>MISSION</dt>
+             <dd>
+               <h3>使命</h3>
+               <p><p>提供货真价实的产品，超于用户期待的服务，建立与用户之间的感情连接</p>
+               <p>为员工创造学习、竞争的工作环境</p></p>
+               <span></span>
+           </dd>
+       </dl>
+   </li>
+</ul>
+</div>
+<div class="cen">
+  <div class="mainCase">
+    <div class="zouyou"><a class="chanpinL" id="btn2"></a><a class="chanpinR" id="btn1"></a></div>
+    <div class="videoMove" id="scrollDiv">
+      <ul>
+        <li>
+            <dl class="aa" id='1'>
+                <dt><a href="http://127.0.0.1/a/youshi/baozhang/index.html"><img src="/templets/moban/images/tzbz.jpg" width="230" height="142"  /></a></dt>
+                <dd></dd>
+            </dl>
+          <dl class="aa" id='2'>
+            <dt><a href="http://127.0.0.1/a/youshi/baozhang/index.html"><img src="/templets/moban/images/tzbz2.jpg" width="230" height="142"  /></a></dt>
+            <dd></dd>
+        </dl>
+        <dl class="aa" id='3'>
+            <dt><a href="http://127.0.0.1/a/youshi/baozhang/index.html"><img src="/templets/moban/images/tzbz3.jpg" width="230" height="142"  /></a></dt>
+            <dd></dd>
+      </dl>
+  </li><li>
+  <dl class="aa" id='4'>
+    <dt><a href="http://127.0.0.1/a/youshi/baozhang/index.html"><img src="/templets/moban/images/tzbz2.jpg" width="230" height="142"  /></a></dt>
+    <dd></dd>
+</dl>
+<dl class="aa" id='5'>
+    <dt><a href="http://127.0.0.1/a/youshi/baozhang/index.html"><img src="/templets/moban/images/tzbz.jpg" width="230" height="142"  /></a></dt>
+    <dd></dd>
+</dl>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+</section>
+<a name="news"> </a>
+<section class="in-news item" id="item2">
+    <article class="in-sub-news">
+       <div class="lit-title"><img src="/templets/moban/images/in-new-tit.png" /></div>
+       <div class="lit-xxk"> 
+          <ul class="lit-xq">
+            
+            <li>集团动态</li>
+            
+            <li>节假日休市公告</li>
+            
+            <li>合约到期公告</li>
+            
+            <div class="more-gy more-gy2">
+              <a href="news.html"><span>MORE</span><img src="/templets/moban/images/in-m-jt.png" width="8" height="7" /></a>
+              <i></i>
+            </div>
+          </ul>
+      <div class="check">
+        <div class="checked">
+          <ul>
+            <li>
+                            <dl>
+                                <dt><a href="/a/zuixingonggao/xingyedongtai/2017/0929/30.html"><img src="/uploads/allimg/171011/140A54616-0.jpg" /></a></dt>
+                                <dd>
+                                    <small>2017-10-16</small>
+                                    <h3><a href="/a/zuixingonggao/xingyedongtai/2017/0929/30.html">GFX高保正式进军国内市场，或掀狂澜</a></h3>
+                                    <p>有人说，这是人傻钱多的典型代表。也有人说，拍下此午餐多半是为了炒作。还有人说，这是接近世界...</p>
+                                    <a href="/a/zuixingonggao/xingyedongtai/2017/0929/30.html" class="blck">more</a>
+                                </dd>
+                            </dl>
+                        </li>
+<li>
+                            <dl>
+                                <dt><a href="/a/zuixingonggao/jituandongtai/2017/0929/17.html"><img src="/uploads/allimg/171011/140A54616-0.jpg" /></a></dt>
+                                <dd>
+                                    <small>2017-10-16</small>
+                                    <h3><a href="/a/zuixingonggao/jituandongtai/2017/0929/17.html">全聚德拟收购汤城小厨餐饮管理有限公司股权</a></h3>
+                                    <p> 为延伸产业链之战略目标，实现共赢。近日，大连天神娱乐股份有限公司全资子公司北京天神互动科...</p>
+                                    <a href="/a/zuixingonggao/jituandongtai/2017/0929/17.html" class="blck">more</a>
+                                </dd>
+                            </dl>
+                        </li>
+<li>
+                            <dl>
+                                <dt><a href="/a/zuixingonggao/chanpindongtai/2017/0929/6.html"><img src="/uploads/allimg/171011/171011/1-1G011140420960.jpg" /></a></dt>
+                                <dd>
+                                    <small>2017-10-16</small>
+                                    <h3><a href="/a/zuixingonggao/chanpindongtai/2017/0929/6.html">GFX高保公布重磅推出“金鹰计划”</a></h3>
+                                    <p>2016年12月15日晚，由国家新闻出版广电总局主管，中国音像与数字出版协会主办，中国音数协游戏工委...</p>
+                                    <a href="/a/zuixingonggao/chanpindongtai/2017/0929/6.html" class="blck">more</a>
+                                </dd>
+                            </dl>
+                        </li>
+<li>
+                            <dl>
+                                <dt><a href="/a/zuixingonggao/jituandongtai/2017/1011/86.html"><img src="/uploads/allimg/171011/171011/1-1G011140420960.jpg" /></a></dt>
+                                <dd>
+                                    <small>2017-10-16</small>
+                                    <h3><a href="/a/zuixingonggao/jituandongtai/2017/1011/86.html">GFX高保公布重磅推出“金鹰计划”</a></h3>
+                                    <p>GFX高保公布重磅推出金鹰计划 时间： 2017-10-11 10:37 作者：柳冰冰 来源：互联网 点击:171次 据GFX高保相...</p>
+                                    <a href="/a/zuixingonggao/jituandongtai/2017/1011/86.html" class="blck">more</a>
+                                </dd>
+                            </dl>
+                        </li>
+
+          </ul>
+        </div>
+
+        <div class="checked">
+            <ul>
+                <li>
+                    <dl>
+                        <dt><a href="/a/zuixingonggao/chanpindongtai/2017/0929/6.html"><img src="/uploads/allimg/171011/171011/1-1G011140420960.jpg" /></a></dt>
+                        <dd>
+                            <small>2017-10-16</small>
+                            <h3><a href="/a/zuixingonggao/chanpindongtai/2017/0929/6.html">GFX高保公布重磅推出“金鹰计划”</a></h3>
+                            <p>2016年12月15日晚，由国家新闻出版广电总局主管，中国音像与数字出版协会主办，中国音数协游戏工委...</p>
+                            <a href="/a/zuixingonggao/chanpindongtai/2017/0929/6.html" class="blck">more</a>
+                        </dd>
+                    </dl>
+                </li>
+<li>
+                    <dl>
+                        <dt><a href="/a/zuixingonggao/chanpindongtai/2017/0929/19.html"><img src="/bona/uploads/allimg/171011/171011/1-1G01114064UX.jpg" /></a></dt>
+                        <dd>
+                            <small>2017-10-16</small>
+                            <h3><a href="/a/zuixingonggao/chanpindongtai/2017/0929/19.html">GFX高保丰富的产品，才是市场最迫切的需求</a></h3>
+                            <p>2013年11月23日，伴随着缤纷的雪花，《坦克风云》正式与大家见面。我们致力于将《坦克风云》打造成...</p>
+                            <a href="/a/zuixingonggao/chanpindongtai/2017/0929/19.html" class="blck">more</a>
+                        </dd>
+                    </dl>
+                </li>
+<li>
+                    <dl>
+                        <dt><a href="/a/zuixingonggao/chanpindongtai/2017/0929/21.html"><img src="/bona/uploads/allimg/171011/171011/1-1G01114064UX.jpg" /></a></dt>
+                        <dd>
+                            <small>2017-10-16</small>
+                            <h3><a href="/a/zuixingonggao/chanpindongtai/2017/0929/21.html">GFX高保丰富的产品，才是市场最迫切的需求</a></h3>
+                            <p>由小米互娱·金山云主办的2016游戏生态年会“HaiFun”于11月3日至4日在海南海口主办，天神娱乐子公司...</p>
+                            <a href="/a/zuixingonggao/chanpindongtai/2017/0929/21.html" class="blck">more</a>
+                        </dd>
+                    </dl>
+                </li>
+<li>
+                    <dl>
+                        <dt><a href="/a/zuixingonggao/chanpindongtai/2017/0929/20.html"><img src="/bona/uploads/allimg/171011/171011/1-1G011140420960.jpg" /></a></dt>
+                        <dd>
+                            <small>2017-10-16</small>
+                            <h3><a href="/a/zuixingonggao/chanpindongtai/2017/0929/20.html">GFX高保公布重磅推出“金鹰计划”</a></h3>
+                            <p>由被奉为经典凡人流开山之作的《凡人修仙传》改编的手游是天神娱乐子公司天神互动与乐逗游戏继《...</p>
+                            <a href="/a/zuixingonggao/chanpindongtai/2017/0929/20.html" class="blck">more</a>
+                        </dd>
+                    </dl>
+                </li>
+
+            </ul>
+        </div>
+        <div class="checked">
+            <ul>
+                <li>
+                    <dl>
+                        <dt><a href="/a/zuixingonggao/xingyedongtai/2017/0929/30.html"><img src="/uploads/allimg/171011/140A54616-0.jpg" /></a></dt>
+                        <dd>
+                            <small>2017-10-16</small>
+                            <h3><a href="/a/zuixingonggao/xingyedongtai/2017/0929/30.html">GFX高保正式进军国内市场，或掀狂澜</a></h3>
+                            <p>有人说，这是人傻钱多的典型代表。也有人说，拍下此午餐多半是为了炒作。还有人说，这是接近世界...</p>
+                            <a href="/a/zuixingonggao/xingyedongtai/2017/0929/30.html" class="blck">more</a>
+                        </dd>
+                    </dl>
+                </li>
+<li>
+                    <dl>
+                        <dt><a href="/a/zuixingonggao/xingyedongtai/2017/0929/29.html"><img src="/bona/uploads/allimg/171011/1-1G011141T4G8.jpg" /></a></dt>
+                        <dd>
+                            <small>2017-10-16</small>
+                            <h3><a href="/a/zuixingonggao/xingyedongtai/2017/0929/29.html">GFX高保正式进军国内市场，或掀狂澜</a></h3>
+                            <p>有人说，这是人傻钱多的典型代表。也有人说，拍下此午餐多半是为了炒作。还有人说，这是接近世界...</p>
+                            <a href="/a/zuixingonggao/xingyedongtai/2017/0929/29.html" class="blck">more</a>
+                        </dd>
+                    </dl>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</div> 
+</article>
+</section>
+<a name="group"> </a>
+<section class="in-yewu item" id="item3">
+  <div class="in-yw-xk">
+    <ul class="in-sub-xk">
+        <li>
+            <dl>
+                <dt><span></span></dt>
+                <dd>
+                    <h3><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">界面简洁</a></h3>
+                    <small><a href="/a/ruanjian/ruanjianjieshao/">INTERFACE SIMPLE</a></small>
+                    <span></span>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><span></span></dt>
+                <dd>
+                    <h3><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">操作方便</a></h3>
+                    <small><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">EASY OPERATION</a></small>
+                    <span></span>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><span></span></dt>
+                <dd>
+                    <h3><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">下单高速</a></h3>
+                    <small><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">HIGH SPEED PLACE THE ORDER</a></small>
+                    <span></span>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><span></span></dt>
+                <dd>
+                    <h3><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">系统稳定</a></h3>
+                    <small><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">SYSTEM STABILITY</a></small>
+                    <span></span>
+                </dd>
+            </dl>
+        </li>
+        <li>
+            <dl>
+                <dt><span></span></dt>
+                <dd>
+                    <h3><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">五档行情</a></h3>
+                    <small><a href="http://localhost/bona/a/ruanjian/ruanjianjieshao/">FIVE-RANGE QUOTATION</a></small>
+                    <span></span>
+                </dd>
+            </dl>
+        </li>
+        <!-- <script>
+            $(".in-sub-xk li").click(function(){
+
+            });
+        </script> -->
+        <!-- 
+        <li>
+            <dl>
+            <dt><span></span></dt>
+            <dd>
+                <h3>入市风险揭示</h3>
+                <small>入市风险揭示</small>
+                <span></span>
+            </dd>
+            </dl>
+        </li>
+        
+        <li>
+            <dl>
+            <dt><span></span></dt>
+            <dd>
+                <h3>系统风险揭示</h3>
+                <small>系统风险揭示</small>
+                <span></span>
+            </dd>
+            </dl>
+        </li>
+         -->
+    </ul>
+    <div class="in-qh">
+      <div class="in-sub-qh">
+        <div class="in-bg-qh">
+          <div class="in-hdm"> 
+            <ul class="nei-qh">
+             <li>
+                        <dl>
+                          <dt><a href="/a/ruanjian/ruanjianjieshao/2017/1014/98.html"><span>免费模式账户</span><img src="/uploads/allimg/171014/1-1G0141520400-L.png" width="98" height="99" /></a></dt>
+                          <dd>[ 免费模式账户 ]</dd>
+                        </dl>
+                      </li>
+<li>
+                        <dl>
+                          <dt><a href="/a/ruanjian/ruanjianjieshao/2017/1014/97.html"><span>开立真实账户</span><img src="/uploads/allimg/171014/1-1G0141520130-L.png" width="98" height="99" /></a></dt>
+                          <dd>[ 开立真实账户 ]</dd>
+                        </dl>
+                      </li>
+<li>
+                        <dl>
+                          <dt><a href="/a/ruanjian/ruanjianjieshao/2017/1014/96.html"><span>PC端下载</span><img src="/uploads/allimg/171014/1-1G0141519430-L.png" width="98" height="99" /></a></dt>
+                          <dd>[ PC端下载 ]</dd>
+                        </dl>
+                      </li>
+<li>
+                        <dl>
+                          <dt><a href="/a/ruanjian/ruanjianjieshao/2017/1014/95.html"><span>Android下载</span><img src="/uploads/allimg/171014/1-1G0141519230-L.png" width="98" height="99" /></a></dt>
+                          <dd>[ Android下载 ]</dd>
+                        </dl>
+                      </li>
+<li>
+                        <dl>
+                          <dt><a href="/a/ruanjian/ruanjianjieshao/2017/1014/94.html"><span>IOS下载</span><img src="/uploads/allimg/171014/1-1G014151J90-L.png" width="98" height="99" /></a></dt>
+                          <dd>[ IOS下载 ]</dd>
+                        </dl>
+                      </li>
+
+          </ul>
+        </div>
+        <div class="left-right">
+          <a href="javascript:;" class="hd-left"></a>
+          <a href="javascript:;" class="hd-right"></a>
+        </div>
+     </div> 
+    </div>
+    </div>
+  <div class="more-gy more-gy3">
+    <a href="http://localhost/bona/a/chanpin/"><span>MORE</span><img src="/templets/moban/images/in-m-jt.png" width="8" height="7" /></a>
+    <i></i>
+  </div>   
+  <div class="jtyw"><img src="/templets/moban/images/in-jtyw.png" /></div>
+</div>
+</section>
+
+<section class="in-tzgx item" id="item4">
+ <article class="lft-tit">
+     <div class="left-sub-tit">
+        <img src="/templets/moban/images/in-tzgx.png" />
+        <div class="more-gy more-gy4">
+         <a href=""><span>MORE</span><img src="/templets/moban/images/in-m-jt.png" width="8" height="7" /></a>
+         <i></i>
+     </div> 
+ </div>
+</article>
+<a name="help_center"> </a>
+<article class="rit-xq">
+    <div class="rit-top">
+        <div class="ri-lft">
+            <div class="ri-tit">
+                <p><img src="/templets/moban/images/in-hf1.png" /></p>
+                <h3><span>期货基础知识</span><font>Futures basic knowledge</font></h3>
+            </div>
+            <ul>
+            <li>
+              <a target="_blank" href="/a/kehuzhichi/qihuojichuzhishi/2017/1013/90.html" title="国际期货交易优势"><span>国际期货交易优势</span></a>
+              <font style="float:right;">2017-10-13</font>          
+            </li>
+<li>
+              <a target="_blank" href="/a/kehuzhichi/qihuojichuzhishi/2017/1013/89.html" title="什么是股指期货？"><span>什么是股指期货？</span></a>
+              <font style="float:right;">2017-10-13</font>          
+            </li>
+
+          </ul>
+          <div class="ri-tit" style="margin-top: 25px;">
+                <h3><span>国际期货交易优势?</span><font>WHAT IS STOCK INDEX FUTURES?</font></h3>
+          </div>
+          <ul>
+            <li>
+              <a target="_blank" href="/a/kehuzhichi/guojiqihuojiaoyiyoushi/2017/1013/93.html" title="关于重大资产重组进展暨延期复牌的公告..."><span>关于重大资产重组进展暨延期复牌的公告...</span></a>
+              <font style="float:right;">2017-10-13</font>          
+            </li>
+<li>
+              <a target="_blank" href="/a/kehuzhichi/guojiqihuojiaoyiyoushi/2017/1013/92.html" title="关于实际控制人、控股股东股权质押的公告..."><span>关于实际控制人、控股股东股权质押的公告...</span></a>
+              <font style="float:right;">2017-10-13</font>          
+            </li>
+
+          </ul>
+           
+        </div>
+        <div class="ri-rit">
+          <div class="ri-tit">
+              <p><img src="/templets/moban/images/in-hf2.png"/></p>
+              <h3><span>热门产品即时报价</span><font>HOT PRODUCTS INSTANT QUOTES</font></h3>
+          </div>
+          <div class="gp">
+              <div class="quotes">
+                  <!-- <iframe src="http://http://gfx.cn.com/index.html" width="980" height="700" frameborder="0" scrolling="no" style="position: absolute; top: -120px; left: -680px;"></iframe> -->
+                  <table>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">交易品种</th>
+                          <td>最小波动</td>
+                          <td>合约乘数</td>
+                          <td class="bond">交易保证金</td>
+                      </tr>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">恒生指数</th>
+                          <td>1.0/跳</td>
+                          <td>50HKD</td>
+                          <td class="bond">6500HKD</td>
+                      </tr>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">恒生指数</th>
+                          <td>1.0/跳</td>
+                          <td>50HKD</td>
+                          <td class="bond">6500HKD</td>
+                      </tr>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">恒生指数</th>
+                          <td>1.0/跳</td>
+                          <td>50HKD</td>
+                          <td class="bond">6500HKD</td>
+                      </tr>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">恒生指数</th>
+                          <td>1.0/跳</td>
+                          <td>50HKD</td>
+                          <td class="bond">6500HKD</td>
+                      </tr>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">恒生指数</th>
+                          <td>1.0/跳</td>
+                          <td>50HKD</td>
+                          <td class="bond">6500HKD</td>
+                      </tr>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">恒生指数</th>
+                          <td>1.0/跳</td>
+                          <td>50HKD</td>
+                          <td class="bond">6500HKD</td>
+                      </tr>
+                      <tr>
+                          <th style="font-size: 16px; font-weight: bold;">恒生指数</th>
+                          <td>1.0/跳</td>
+                          <td>50HKD</td>
+                          <td class="bond">6500HKD</td>
+                      </tr>
+                  </table>
+              </div>
+            <a href="">查看更多</a>
+        </div>
+    </div>
+</div>
+</article>
+</section>
+</div>
+<a name="bottom"> </a>
+<style>
+  #fixed_nav{
+    width: 70px;
+    height: 160px;
+    position: fixed;
+    bottom: 300px;
+    right: 5px;
+    text-align: center;
+  }
+  #fixed_nav a{
+    display: block;
+    width: 70px;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 10px;
+    background-color: #ccc;
+  }
+  #fixed_nav a:hover{
+    cursor: pointer;
+    background-color: #333;
+    color: #fff;
+  }
+</style>
+<div id="fixed_nav" class="menu">
+  <a href="#about" >关于高保</a>
+  <a href="#item2">新闻中心</a>
+  <a href="#item3">集团业务</a>
+  <a href="#item4">客户支持</a>
+</div>
+
+<div class="prompt" id="prompt" style="display: block;">
+
+<div class="maskLayer" style="height: 5900px;"></div>
+<div class="promptCnt" id="promptCnt">
+        <div class="promptCntHead">
+            <p>温馨提示</p>
+        </div>
+        　　    <div class="promptCntOne" id="promptCntOne">
+	<div class="content1">
+		<div class="content_mid">
+			<p>
+				在继续浏览本公司网站前，请您确认您或您所代表的机构为符合中国证券监督管理委员会规定的私募证券投资基金的合格投资者（即具备相应风险识别能力和风险承担能力，投资于本私募基金的金额不低于100 万元，且个人投资者的金融资产不低于300万元或者最近三年个人年均收入不低于50 万元，机构投资者的净资产不低于1000万元，或为监管机构认可的其他合格投资者）。前述&quot;金融资产&quot;包括银行存款、股票、债券、基金份额、资产管理计划、银行理财产品、信托计划、保险产品、期货权益等。</p>
+			<p>
+				如果您进入、访问或使用本网站或本网站内任何网页，即被视为您声明及保证为&quot;合格投资者&quot;，并视为您已同意接受本网站所有条款与条件的约束。</p>
+			<p>
+				本网站介绍的信息、工具和资料仅供一般性参考。除非另有明确协议，并不构成广告或分销、销售要约，或招揽买入任何基金或其他投资产品的任何要约或要约邀请。</p>
+			<p>
+				投资涉及风险，投资产品的过往业绩并不预示或暗示其未来表现，投资者在做出投资决策前应认真阅读相关产品合同，可以寻求适当的专业投资和税务咨询意见。投资者不应该依赖本网站所提供的资料做出投资决策。</p>
+		</div>
+	</div>
+</div>
+<div class="promptCntTwo">
+	<p>
+		如果确认您或您所代表的机构为符合中国证券监督管理委员会规定的私募证券投资基金的合格投资者，并将遵守适用的有关法规请点击&quot;<span>确认</span>&quot;键以继续浏览本公司网站。如您不同意任何有关条款，请点击&quot;<span>放弃</span>&quot;键。</p>
+</div>
+
+                <div class="promptCntBtn">
+                  
+                    <button onclick="jump()">放弃</button>
+                    <button onclick="ShutDown()" >确定</button>
+                </div>
+            </div>
+      </div>
+ 
+<link href="/templets/moban/style/StyleSheet1.css" rel="stylesheet" />
+
+<footer>
+  <div class="foot">
+     <ul class="fot-left">
+        <li>
+          <h2>走进GFX高保</h2>
+          <span></span>
+          <a href="">GFX高保介绍</a>
+          <a href="">GFX高保优势</a>
+          <a href="">投资及保障</a>
+          <a href="">牌照及监管</a>
+      </li> 
+      <li>
+          <h2>软件下载</h2>
+          <span></span>
+          <a href="/">桌面版交易平台</a>
+          <a href="">Android版</a>
+          <a href="">IOS版</a>
+      </li> 
+      <li>
+          <h2>账户</h2>
+          <span></span>
+          <a href="">免费模拟账户</a>
+          <a href="">开立真实账户</a>
+          <a href="">管理我的账户</a>
+          <a href="">GFX高保政策</a>
+      </li> 
+      <li>
+          <h2>外汇基础知识</h2>
+          <span></span>
+          <a href="">什么是外汇？</a>
+          <a href="">如何查看图表</a>
+          <a href="">GFX高保美元/日元外汇交易</a>
+          <a href="">常见问题</a>
+      </li> 
+      <li>
+
+          <h2>网站导航</h2>
+
+          <span></span>
+           <div class="menu">
+           <a href="#about" >关于高保</a>
+           <a href="#item2">新闻中心</a>
+           <a href="#item3">集团业务</a>
+           <a href="#item4">客户支持</a>
+           </div>
+
+      </li> 
+
+  </ul>
+
+  <div class="fot-rit">
+
+   <p><img src="/templets/moban/images/in-ew.png" /></p>
+
+   <ul>
+
+     <li class="m1"><a href=""></a></li>
+
+     <li class="m2"><a href="http://t.qq.com/tianshenyule?preview"></a></li>
+
+     <li class="m3"><a href="http://weibo.com/u/5893600209/home?wvr=5"></a></li>
+ </ul>
+    </div>
+    </div>
+    <div class="foot-yqlj">
+      <ul>
+         <li><a>友情链接：</a></li>
+		 
+			<li><a href='http://www.baidu.com' target='_blank'>百度</a> </li>
+		 
+			<li><a href='http://www.google.com.hk' target='_blank'>谷歌</a> </li>
+		
+        
+     </ul>
+    </div>
+
+
+    <div id="overall-footer-disclaimer">
+    <div class="footer container">
+        <div class="footer-disclaimer mobileInner">
+        <div class="paddingBottom20">
+        <div data-banner="0" style="display: block;">
+            <sup>^</sup><span data-placement="account_execution">标准账户的执行模式预设为交易员平台执行模式，而尊贵账户的执行模式则预设为无交易员平台执行模式。</span> <span data-placement="account_limit">就标准账户而言，部份交易方式－食价、新闻交易及API交易－可能会按照众盈业务条款所述而受到限制。</span><br>
+            <!--*所有真實众盈標準賬戶將會自動參賽<br/>-->
+            *# <span data-placement="spread_variance">此处所示的买卖差价仅供参考，可随时予以更改而无须作出通知。最新买卖差价以众盈交易平台所示者为准。</span> <br>
+            ※ 每客户只能获赠壹次
+        </div>
+        <div data-banner="AS037" style="display: none;">
+            <span data-placement="account_currency">众盈澳洲提供澳元及美元賬戶。根據閣下的賬戶結算貨幣而定，“$”為澳元或美元。</span><br>
+            * <span data-placement="spread_variance">此处所示的买卖差价仅供参考，可随时予以更改而无须作出通知。最新买卖差价以众盈交易平台所示者为准。</span> <br>
+        </div>
+        <div data-banner="AS043" style="display: none;">
+            <span data-placement="account_currency">众盈澳洲提供澳元及美元账户。根据阁下的账户结算货币而定，“$”为澳元或美元
+。</span><br>
+            * <span data-placement="spread_variance">此处所示的买卖差价仅供参考，可随时予以更改而无须作出通知。最新买卖差价以众盈交易平台所示者为准。</span> <br>
+        </div>
+        <div data-banner="AS047" style="display: none;">
+            <span data-placement="account_currency">众盈澳洲提供澳元及美元账户。根据阁下的账户结算货币而定，“$”为澳元或美元。</span><br>
+            * <span data-placement="spread_variance">此处所示的买卖差价仅供参考，可随时予以更改而无须作出通知。最新买卖差价以众盈交易平台所示者为准。</span> <br>
+        </div>
+        <div data-banner="AS049" style="display: none;">
+            <span data-placement="account_currency">众盈澳洲提供澳元及美元账户。根据阁下的账户结算货币而定，“$”为澳元或美元。</span><br>
+            * <span data-placement="spread_variance">此处所示的买卖差价仅供参考，可随时予以更改而无须作出通知。最新买卖差价以众盈交易平台所示者为准。</span> <br>
+        </div>
+        ¹ <span data-placement="leverage_disclaimer"><b>杠杆∶</b>杠杆效应有利亦有弊，可以大幅扩大您的盈利，亦可以大幅扩大您的亏损。利用任何水平的杠杆进行外汇交易未必适合所有投资者。</span><br>
+        ² <span data-placement="live_price">买卖差价∶所示的动态实时串流买卖差价数字来自众盈最佳买入/最佳卖出定价系统。买卖差价乃浮动，于正常市场时间可能会出现延迟。众盈致力为交易者提供低及具竞争力的买卖差价；然而，市况有时候可能会导致买卖差价远大于此处所示的买卖差价。以上数字仅供参考，不拟作为交易用途或建议之用。众盈对任何数据错误、不完整或延误或因为依赖本文所载之数据而采取的任何行动概不负责。
+            <br>
+            <h2 style="text-align: center; color: #fff ;margin-top: 20px;margin-bottom: 10px;font-size: 22px; font: 25px/34px 'Opensans-regular','Microsoft JhengHei', Verdana,Geneva,sans-serif;">入市有风险，投资需谨慎</h2>
+        </span><br>
+</div>  
+            <div data-placement="global_footer_disclaimer"></div>
+                        
+            <div class="copyright" style="text-align: center;">
+                Copyright © 2016 高保(Publics Earnings Global) 版权所有 All Rights Reserved 备案号：粤ICP备15083538号
+
+
+                <br>
+
+               <!--  <a href="http://www.10du.org" alt='网站建设,广州做网站,广州建网站,广州网站建设,天河做网站,越秀做网站,荔湾做网站,海珠做网站,白云区做网站,岗顶石牌桥做网站,做网站找十度网络 '>十度网络提供技术支持</a> -->
+               
+                <br>
+                <a href="#" rel="nofollow">使用条款</a> <span class="spacer"> | </span>
+                <a href="#" rel="nofollow">业务条款</a> <span class="spacer"> | </span>
+                                <a href="http://bonatouzi.xgal.shiduyun.com/dibuziliao/2017/0520/72.html" rel="nofollow">投訴</a> <span class="spacer"> | </span>
+                <a href="#">风险警示</a> <span class="spacer"> | </span>
+                <a href="#">常见问题</a> <span class="spacer"> | </span>
+                <a href="javascript://" rel="nofollow" class="friend-link">友情链接</a><span class="spacer"> | </span>
+                <span class="friend">
+                    <div class="friend-tooltip">
+                        <div class="friend-tooltip-wrap">   
+                            <div class="friend-tooltip-inner">
+
+                                <ul class="list-ico ico-bullet ico-simple-yellow list-narrow">
+
+                                                                                             </ul>
+                                <div class="friend-tooltip-shoes"></div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                  
+                </span> 
+                <br>
+              <!--   <div class="js" style="text-align: center; color: #fff" > 原創視覺文化建站:<a href="http://10du.org">十度網絡</a></div> -->
+                
+                 
+
+                <script type="text/javascript">
+                    $(document).ready(function() {
+
+
+                        $('.friend-link').mouseover(function(event) {
+                            $('.friend-tooltip').fadeIn();
+                            $('.friend-disclaimer').fadeIn();
+                            var ww = $('.friend-tooltip').width()/2-$(this).width()/2;
+                            var hh = $('.friend-tooltip').height()+14; /*+parseInt($('.friend-tooltip').css('margin-bottom'));*/
+                            var xx = $('span.friend').position().left;
+                            var dww = $('.copyright').width();
+                            //console.log(xx);
+                            $('.friend-tooltip').css({
+                                'top':-hh,
+                                'left':0,
+                                'margin-left': -ww
+                            })
+                            $('.friend-disclaimer').css({
+                                'margin-left': -xx,
+                                'width': dww
+                            })
+                            
+                        });
+                            
+                        $('.friend-tooltip').mouseleave(function(event) {
+                            $('.friend-tooltip').hide();
+                            $('.friend-disclaimer').hide();
+                        });
+                            
+                    });
+                </script>
+                
+            </div>
+                    </div>
+    </div>
+</div>
+<style>
+    #overall-footer-disclaimer {
+    background: #af580c;
+    border-top: 1px solid #c66f22;
+    padding: 20px 0 50px;
+     }
+     .footer-disclaimer {
+    color: #FFF;
+    font-size: 11px;
+    line-height: 16px;
+    }
+    .paddingBottom20 {
+    padding-bottom: 20px !important;
+    font-family: '宋体';
+    }
+    .footer-disclaimer .copyright {
+    border-top: #FFF 1px solid;
+    padding: 10px 0;
+    line-height: 20px;
+    }
+    .container {
+    position: relative;
+    width: 1200px;
+    left: 50%;
+    margin-left: -600px;
+    display: table;
+}
+.footer-disclaimer a {
+    color: #FFF;
+    text-decoration: underline;
+    font-family: '宋体';
+}
+.footer-disclaimer .copyright .spacer {
+    display: inline-block;
+    padding: 0 .7em;
+}
+.footer-disclaimer a:hover {
+    color: #FFF;
+    text-decoration: none;
+    color: #23527c;
+}
+
+</style>
+</footer>
+<script type="text/javascript" src="/templets/moban/js/slider-hd.js"></script>
+</body>
+</html>
